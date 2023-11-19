@@ -13,7 +13,7 @@ console.log("Connected and watching");
 // Structure of the .js will be like so:
 // 1. Create a class for the todo elements (TodoItem) that creates new todo objects. This will be a class that creates objects
 // and allows users to edit all of their indvidiual properties.
-    // a. Create a constructor that takes in the task name, due date, priority, completion status, project (default = Inbox)
+    // a. Create a constructor that takes in the task name, description, due date, priority, completion status, project (default = Inbox)
     // b. Create methods that allows users to edit the task name, due date, priority, completion status, and project
     
 // 2. Create a class (TodoList) that begins with an empty list, and then has methods that allow users to add and remove todo objects, ultimately storing all of the objects in one place so that they can be sorted.
