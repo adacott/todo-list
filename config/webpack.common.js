@@ -4,9 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: "development",
-    entry: './src/js/index.js',
+    entry: {
+        index: './src/js/index.js',
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, '../dist'),
         clean: true,
     },
@@ -40,6 +42,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: "[name].html",
             template: "./src/html/index.html",
             inject: 'body',
             minify: {
@@ -49,7 +52,7 @@ module.exports = {
             }
         }),
         new MiniCssExtractPlugin({
-            filename: "style.css", // can also do [name].css if serving up multiple files to generate the appropriate name
+            filename: "[name].css", // can also do [name].css if serving up multiple files to generate the appropriate name
             chunkFilename: "[id].css"
         })
     ],
